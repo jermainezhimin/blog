@@ -141,6 +141,13 @@ const Index = () => {
               ml={2}
               mr={4}
             />
+            <Icon
+              aria-label={'roblox'}
+              name={'roblox'}
+              size={['50px', '50px', '60px']}
+              ml={2}
+              mr={4}
+            />
           </Flex>
           <Divider />
         </Box>
@@ -186,6 +193,18 @@ const Index = () => {
           </Heading>
           <Timeline
             activitiesByYear={{
+              '2020': [
+                {
+                  title: 'Joined Roblox',
+                  description:
+                    "It started as an opportunity to be the product owner of the home, discover, search and experience details web pages; leading the web experience for millions of users. The urge to grow initiatives got the best of me. I've since gone on to stand up our design system and the Creator Dashboard product (bringing our DAU from 1.9 to 150k in a year)",
+                  tags: {
+                    discover_page: 'https://www.roblox.com/discover',
+                    creator_dashboard: 'https://www.create.roblox.com',
+                    design_system: 'https://www.uiblox.roblox.com',
+                  },
+                },
+              ],
               '2019': [
                 {
                   title: 'Joined CrowdAI',
