@@ -11,10 +11,10 @@ import {
   Stack,
   Divider,
   Tag,
-  TagIcon,
+  // TagIcon,
   TagLabel,
   Button,
-} from '@chakra-ui/core'
+} from '@chakra-ui/react'
 
 const YearDivider = () => {
   const { colorMode } = useColorMode()
@@ -84,7 +84,7 @@ const Timeline = ({ activitiesByYear }) => {
                               isExternal
                             >
                               <Tag size="sm" key={tag}>
-                                <TagIcon icon="link" size="12px" />
+                                {/* <TagIcon icon="link" size="12px" /> */}
                                 <TagLabel>{tag}</TagLabel>
                               </Tag>
                             </Link>

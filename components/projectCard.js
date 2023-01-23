@@ -5,11 +5,12 @@ import {
   Heading,
   Text,
   Stack,
-  Icon,
   useColorMode,
-} from '@chakra-ui/core'
+} from '@chakra-ui/react'
 
-const ProjectCard = ({ title, description, href, icon, size }) => {
+import ObjectIveIcon from './icons/ObjectIveIcon'
+
+const ProjectCard = ({ title, description, href }) => {
   const { colorMode } = useColorMode()
   const borderColor = {
     light: 'gray.200',
@@ -41,11 +42,9 @@ const ProjectCard = ({ title, description, href, icon, size }) => {
         borderRadius={4}
         p={4}
       >
-        <Icon
-          aria-label={`${title}-icon`}
-          name={icon}
+        <ObjectIveIcon
           color={iconColor[colorMode]}
-          size={size ? size : '32px'}
+          boxSize={'56px'}
           ml={2}
           mr={4}
         />

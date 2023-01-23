@@ -2,7 +2,7 @@ import React from 'react'
 import NextLink from 'next/link'
 import styled from '@emotion/styled'
 
-import { useColorMode, Heading, Text, Flex, Box, Link } from '@chakra-ui/core'
+import { useColorMode, Heading, Text, Flex, Box, Link } from '@chakra-ui/react'
 import Date from './date'
 
 const SelectableBox = styled(Box)`

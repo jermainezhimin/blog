@@ -10,7 +10,7 @@ import {
   Text,
   Divider,
   useColorMode,
-} from '@chakra-ui/core'
+} from '@chakra-ui/react'
 import NextLink from 'next/link'
 
 const Table = (props) => (

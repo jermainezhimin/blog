@@ -9,7 +9,7 @@ import {
   InputGroup,
   InputRightElement,
   Icon,
-} from '@chakra-ui/core'
+} from '@chakra-ui/react'
 import { getSortedBlogsData } from '../../lib/blog'
 import Layout from '../../components/layout'
 import Subscribe from '../../components/subscribe'
