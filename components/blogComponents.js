@@ -1,18 +1,17 @@
 import React from 'react'
 import {
   Box,
-  Callout,
+  Alert,
   Code,
   Heading,
   Kbd,
   Link,
-  PseudoBox,
   Text,
   Divider,
   useColorMode,
-} from '@chakra-ui/core'
+} from '@chakra-ui/react'
 import NextLink from 'next/link'
-
+console.log(Box, Alert, Code, Heading, Kbd, Link, Text, Divider, useColorMode)
 const Table = (props) => (
   <Box as="table" textAlign="left" mt="32px" width="full" {...props} />
 )
@@ -77,7 +76,7 @@ const Quote = (props) => {
   }
 
   return (
-    <Callout
+    <Alert
       mt={4}
       w="98%"
       flexDirection="column"
@@ -119,7 +118,7 @@ const DocsHeading = (props) => (
     <Box pointerEvents="auto">
       {props.children}
       {props.id && (
-        <PseudoBox
+        <Box
           aria-label="anchor"
           as="a"
           color="blue.500"
@@ -134,7 +133,7 @@ const DocsHeading = (props) => (
           href={`#${props.id}`}
         >
           #
-        </PseudoBox>
+        </Box>
       )}
     </Box>
   </Heading>

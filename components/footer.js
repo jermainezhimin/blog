@@ -1,5 +1,10 @@
 import React from 'react'
-import { useColorMode, Flex, Link, Text, IconButton } from '@chakra-ui/core'
+import { useColorMode, Flex, Link, Text, IconButton } from '@chakra-ui/react'
+
+import GithubIcon from './icons/GithubIcon'
+import TwitterIcon from './icons/TwitterIcon'
+import LinkedinIcon from './icons/LinkedinIcon'
+import MailIcon from './icons/MailIcon'
 
 const Footer = () => {
   const { colorMode } = useColorMode()
@@ -44,7 +49,7 @@ const Footer = () => {
         >
           <IconButton
             aria-label="Twitter"
-            icon="twitter"
+            icon={<TwitterIcon />}
             size="lg"
             color={redColor[colorMode]}
             variant="ghost"
@@ -57,7 +62,7 @@ const Footer = () => {
         >
           <IconButton
             aria-label="GitHub"
-            icon="github"
+            icon={<GithubIcon />}
             size="lg"
             color={yellowColor[colorMode]}
             variant="ghost"
@@ -70,7 +75,7 @@ const Footer = () => {
         >
           <IconButton
             aria-label="LinkedIn"
-            icon="linkedin"
+            icon={<LinkedinIcon />}
             size="lg"
             color={greenColor[colorMode]}
             variant="ghost"
@@ -79,7 +84,7 @@ const Footer = () => {
         <Link href="mailto:jermainezhimin@gmail.com" title="Email" isExternal>
           <IconButton
             aria-label="Email"
-            icon="mail"
+            icon={<MailIcon />}
             size="lg"
             color={blueColor[colorMode]}
             variant="ghost"

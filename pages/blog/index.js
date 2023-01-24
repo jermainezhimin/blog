@@ -8,12 +8,12 @@ import {
   Input,
   InputGroup,
   InputRightElement,
-  Icon,
-} from '@chakra-ui/core'
+} from '@chakra-ui/react'
 import { getSortedBlogsData } from '../../lib/blog'
 import Layout from '../../components/layout'
 import Subscribe from '../../components/subscribe'
 import BlogPost from '../../components/blogPost'
+import SearchIcon from '../../components/icons/SearchIcon'
 
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
@@ -118,7 +118,7 @@ const Blog = ({ allBlogsData }) => {
                 placeholder="Search articles"
               />
               <InputRightElement>
-                <Icon name="search" color="gray.300" />
+                <SearchIcon color="gray.300" />
               </InputRightElement>
             </InputGroup>
             {!filteredBlogPosts.length && 'No posts found.'}

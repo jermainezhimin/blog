@@ -2,14 +2,11 @@ import React from 'react'
 import NextLink from 'next/link'
 import Head from 'next/head'
 import styled from '@emotion/styled'
-import {
-  useColorMode,
-  Button,
-  Flex,
-  Box,
-  IconButton,
-  Icon,
-} from '@chakra-ui/core'
+import { useColorMode, Button, Flex, Box, IconButton } from '@chakra-ui/react'
+
+import SunIcon from './icons/SunIcon'
+import MoonIcon from './icons/MoonIcon'
+import JermaineIcon from './icons/JermaineIcon'
 import Footer from './footer'
 
 const site = 'http://www.jermainecheng.com'
@@ -25,7 +22,7 @@ const StickyNav = styled(Flex)`
   backdrop-filter: saturate(180%) blur(20px);
   transition: background-color 0.1 ease-in-out;
 `
-const MainIcon = styled(Icon)`
+const MainIcon = styled(JermaineIcon)`
   transition: color 0.25s;
   position: sticky;
   z-index: 10;
@@ -96,7 +93,7 @@ const Layout = ({ children }) => {
           <MainIcon
             aria-label="Jermaine"
             name="jermaine"
-            size="40px"
+            boxSize="40px"
             color={primarytextColor[colorMode]}
             variant="ghost"
             cursor="pointer"
@@ -116,7 +113,7 @@ const Layout = ({ children }) => {
           <IconButton
             aria-label="Toggle dark mode"
             ml={2}
-            icon={colorMode === 'dark' ? 'sun' : 'moon'}
+            icon={colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
             onClick={toggleColorMode}
           />
         </Box>

@@ -6,14 +6,19 @@ import {
   Flex,
   Stack,
   Box,
-  Icon,
   Link,
   Divider,
-} from '@chakra-ui/core'
+} from '@chakra-ui/react'
+
+import PeriscopeDataIcon from '../components/icons/PeriscopeDataIcon'
+import CrowdAIIcon from '../components/icons/CrowdAIIcon'
+import SisenseIcon from '../components/icons/SisenseIcon'
+import RobloxIcon from '../components/icons/RobloxIcon'
 
 import Timeline from '../components/timeline'
 import Layout from '../components/layout'
 import ProjectCard from '../components/projectCard'
+import AppleIcon from '../components/icons/AppleIcon'
 
 const Index = () => {
   const { colorMode } = useColorMode()
@@ -111,43 +116,21 @@ const Index = () => {
         <Box w="100%">
           <Divider />
           <Flex w="100%" justifyContent="space-evenly" alignItems="center">
-            <Icon
-              aria-label={'periscopedata'}
-              name={'periscopedata'}
+            <PeriscopeDataIcon
               color={purpleColor[colorMode]}
-              size={['50px', '50px', '60px']}
+              boxSize={['50px', '50px', '60px']}
               ml={2}
               mr={4}
             />
-            <Icon
-              aria-label={'apple'}
-              name={'apple'}
+            <AppleIcon
               color={grayColor[colorMode]}
-              size={['50px', '50px', '60px']}
+              boxSize={['50px', '50px', '60px']}
               ml={2}
               mr={4}
             />
-            <Icon
-              aria-label={'sisense'}
-              name={'sisense'}
-              size={['50px', '50px', '60px']}
-              ml={2}
-              mr={4}
-            />
-            <Icon
-              aria-label={'crowdai'}
-              name={'crowdai'}
-              size={['75px', '75px', '100px']}
-              ml={2}
-              mr={4}
-            />
-            <Icon
-              aria-label={'roblox'}
-              name={'roblox'}
-              size={['50px', '50px', '60px']}
-              ml={2}
-              mr={4}
-            />
+            <SisenseIcon boxSize={['50px', '50px', '60px']} ml={2} mr={4} />
+            <CrowdAIIcon boxSize={['75px', '75px', '100px']} ml={2} mr={4} />
+            <RobloxIcon boxSize={['50px', '50px', '60px']} ml={2} mr={4} />
           </Flex>
           <Divider />
         </Box>
@@ -170,11 +153,8 @@ const Index = () => {
             title="Objective: Object Collective Tarot Deck"
             description="An illustration project to reimagine the Rider-Waite tarot deck as relatable items/animals in the 21st century"
             href="https://www.kickstarter.com/projects/1988162704/objective-object-collective-tarot-deck"
-            icon="objective"
-            size="56px"
           />
         </Flex>
-
         <Flex
           flexDirection="column"
           justifyContent="flex-start"

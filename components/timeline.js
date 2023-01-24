@@ -7,14 +7,17 @@ import {
   List,
   ListItem,
   Link,
-  Icon,
   Stack,
   Divider,
   Tag,
-  TagIcon,
   TagLabel,
   Button,
-} from '@chakra-ui/core'
+} from '@chakra-ui/react'
+
+import CheckIcon from './icons/CheckIcon'
+import TagIcon from './icons/TagIcon'
+import ChevronMoreIcon from './icons/ChevronMoreIcon'
+import ChevronLessIcon from './icons/ChevronLessIcon'
 
 const YearDivider = () => {
   const { colorMode } = useColorMode()
@@ -37,7 +40,7 @@ const TimelineStep = ({ title, children }) => {
     <ListItem>
       <Stack ml={2} mb={4}>
         <Flex align="center">
-          <Icon name="check-circle" mr={2} color="whatsapp.500" />
+          <CheckIcon mr={2} color="green.500" />
           <Text fontWeight="medium">{title}</Text>
         </Flex>
         <Text color={color[colorMode]} ml={6}>
@@ -77,14 +80,13 @@ const Timeline = ({ activitiesByYear }) => {
                         <Stack flexWrap="wrap" mt={4} spacing={4} isInline>
                           {Object.keys(activity.tags).map((tag) => (
                             <Link
-                              mt={2}
                               key={tag}
                               href={activity.tags[tag]}
                               title={activity.tags[tag]}
                               isExternal
                             >
                               <Tag size="sm" key={tag}>
-                                <TagIcon icon="link" size="12px" />
+                                <TagIcon mr={2} boxSize={3} />
                                 <TagLabel>{tag}</TagLabel>
                               </Tag>
                             </Link>
@@ -100,7 +102,7 @@ const Timeline = ({ activitiesByYear }) => {
         })}
       <Button
         fontWeight="medium"
-        rightIcon={expanded ? 'chevron-up' : 'chevron-down'}
+        rightIcon={expanded ? <ChevronLessIcon /> : <ChevronMoreIcon />}
         onClick={() => setExpanded(!expanded)}
         variant="ghost"
       >
